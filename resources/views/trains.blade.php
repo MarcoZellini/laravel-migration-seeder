@@ -20,12 +20,12 @@
                                 <div>
                                     <strong>Departure: </strong>
                                     {{ $train->departure_point }} -
-                                    {{ $train->departure_time }}
+                                    {{ $train->departure_date_time }}
                                 </div>
                                 <div>
                                     <strong>Arrival: </strong>
                                     {{ $train->arrival_point }} -
-                                    {{ $train->arrival_time }}
+                                    {{ $train->arrival_date_time }}
                                 </div>
                             </div>
                         </div>

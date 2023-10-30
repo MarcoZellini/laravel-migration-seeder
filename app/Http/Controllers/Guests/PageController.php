@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Guests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Train;
+use Carbon\Carbon;
 
 class PageController extends Controller
 {
@@ -15,6 +16,7 @@ class PageController extends Controller
 
     public function trains()
     {
-        return view('trains', ['trains' => Train::all()]);
+        //dd(Train::whereDate('departure_date_time', '=', Carbon::today()->toDateString())->get());
+        return view('trains', ['trains' => Train::whereDay('departure_date_time', '=', date('d'))->get()]);
     }
 }
